@@ -5,7 +5,7 @@ import { TarotCards } from './components/TarotCard'
 
 function App() {
   const [currentCard, setCurrentCard] = useState('');
-  const Cards = ["/Temperance.jpg", "/TheLovers.jpg", "/TheEmpress.jpg"];
+  const Cards = ["/pages_demo/Temperance.jpg", "/pages_demo/TheLovers.jpg", "/pages_demo/TheEmpress.jpg"];
   const randomCard = () => Math.floor(Math.random() * 3);
   const generateRandomCard = () => Cards[randomCard()];
 
