@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import { HelloWorld } from './components/HelloWorld'
-import { TarotCards } from './components/TarotCard'
+import { TarotCard, TarotCards } from './components/TarotCard'
 
 function App() {
   const [currentCard, setCurrentCard] = useState('');
@@ -11,11 +11,12 @@ function App() {
 
   return (
     <>
-      <TarotCards cardPath={currentCard} />
+      {currentCard && <TarotCard cardPath={currentCard} />}
       <div>
         <button onClick={() => setCurrentCard(generateRandomCard())}>Show me my Card, por favor</button>
       </div>
       <HelloWorld />
+      <TarotCards />
     </>
   )
 }
